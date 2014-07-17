@@ -268,7 +268,7 @@
     '("\\<function\\s-+&?\\(\\sw+\\)\\s-*(\\([^)]*\\))"
       (1 font-lock-function-name-face)
       (2 font-lock-variable-name-face keep t))
-    '("\\(?:\\s-\\|\\n\\)+->\\(?:\\s-\\|\\n\\)+\\(\\sw+\\)"
+    '("\\(?:\\s-\\|\\n\\)+->\\(?:\\s-\\|\\n\\)+\\(\\(?:\\sw\\|\\\\\\|[<>]\\)+\\)"
       (1 font-lock-keyword-face))
 
     '("\\<\\(self\\)\\(?:::\\)" (1 font-lock-constant-face nil nil))
