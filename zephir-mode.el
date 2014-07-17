@@ -219,7 +219,7 @@
   (eval-when-compile
     (regexp-opt
      '("boolean" "string" "char" "resource" "object" "array" "callable" "as"
-       "get" "__toString" "set" "abstract" "double" "float" "int" "interface"
+       "get" "__toString" "set" "double" "float" "int" "interface"
        "long" "var" "void" "ulong" "uint" "uchar" "unsigned" "self")))
   "Zephir types.")
 
@@ -231,7 +231,7 @@
         "loop" "in" "reverse" "instanceof" "new" "typeof" "const" "fetch"
         "empty" "likely" "unlikely" "isset" "unset" "extends" "final"
         "implements" "private" "protected" "public" "static" "scoped" "inline"
-        "throws" "clone" "use" "function")))
+        "throws" "clone" "use" "function" "abstract")))
   "Zephir keywords.")
 
 (defconst zephir-font-lock-keywords-1
@@ -268,7 +268,7 @@
     '("\\<function\\s-+&?\\(\\sw+\\)\\s-*(\\([^)]*\\))"
       (1 font-lock-function-name-face)
       (2 font-lock-variable-name-face keep t))
-    '("\\(?:\\s-\\|\\n\\)+->\\(?:\\s-\\|\\n\\)+\\(\\(?:\\sw\\|\\\\\\|[<>]\\)+\\)"
+    '("\\(?:\\s-\\|\\n\\)+->\\(?:\\s-\\|\\n\\)+\\(\\(?:\\sw\\|\\\\\\|\\s-\\|[<>|]\\)+\\)"
       (1 font-lock-keyword-face))
 
     '("\\<\\(self\\)\\(?:::\\)" (1 font-lock-constant-face nil nil))
